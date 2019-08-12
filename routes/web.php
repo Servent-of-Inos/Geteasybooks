@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GetEasyBooksController@index');
+Route::post('/email', 'GetEasyBooksController@store');
