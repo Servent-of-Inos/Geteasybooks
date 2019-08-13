@@ -17,12 +17,15 @@ class GetEasyBooksController extends Controller
 
     public function store(Request $request) 
     {
+        
 		$this->validate($request, [
             'email' => 'required|string|email|max:191'
         ]);
 
 
         Email::create($request->all());
+
+        return redirect('/');
 
     }
 

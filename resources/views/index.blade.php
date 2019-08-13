@@ -10,7 +10,19 @@
     </head>
 
     <body>
-        <p> Hello World!</p>
+        
+        <form action="/email" method="POST">
+
+            {{ csrf_field() }}
+
+			<p>Enter your email:</p>
+
+			<input type="email" name="email" placeholder="example@mail.com">
+
+			<input type="submit" value="Submit">
+
+		</form>
+
     </body>
 
 </html>
